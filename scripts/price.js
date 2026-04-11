@@ -1,0 +1,1 @@
+var c=document.querySelector(".price__header"),t=new IntersectionObserver(r=>{r.forEach(e=>{e.isIntersecting&&e.target.classList.add("price__header--lifted")})}),i=()=>t.observe(c);export{i as liftingPriceHeader};
