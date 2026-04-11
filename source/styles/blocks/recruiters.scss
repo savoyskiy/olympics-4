@@ -1,37 +1,107 @@
 .recruiters {
-  display: grid;
-  grid-template: "text text text" auto "sber mts vtb" 160px "mish chulakov vcru" 159px "epam sportmaster rustore" 159px / 1fr 1fr 1fr;
-  min-height: 822px;
+  // display: grid;
+  // grid-template: "text text text" auto "sber mts vtb" 160px "mish chulakov vcru" 159px "epam sportmaster rustore" 159px / 1fr 1fr 1fr;
+  // min-height: 822px;
+  // padding: 0 0 126px;
+
+  // @media (min-width: $narrow-tablet-width) {
+  //   grid-template: "text text text text" auto "sber mts  vtb ." 192px ". mish chulakov vcru" 192px "epam sportmaster rustore ." 192px / 1fr 1fr 1fr 1fr;
+  //   padding: 0 0 96px;
+  // }
+
+  // @media (min-width: $tablet-width) {
+  //   grid-template: "text text text sber mts" minmax(205px, auto) "text text text vtb mish" minmax(205px, auto) "chulakov vcru epam sportmaster rustore" 205px / 1fr 1fr 1fr 1fr 1fr;
+  //   padding: 0 0 96px;
+  // }
+
+  // @media (min-width: $desktop-width) {
+  //   grid-template: "text text text vtb  mts sber" minmax(240px, auto) "text text text . sportmaster rustore" minmax(239px, auto) "mish chulakov vcru epam . ." 239px / 1fr 1fr 1fr 1fr 1fr 1fr;
+  //   padding: 80px 0;
+  // }
+
+  display: flex;
+  flex-direction: column;
   padding: 0 0 126px;
 
-  @media (min-width: $narrow-tablet-width) {
-    grid-template: "text text text text" auto "sber mts  vtb ." 192px ". mish chulakov vcru" 192px "epam sportmaster rustore ." 192px / 1fr 1fr 1fr 1fr;
-    padding: 0 0 96px;
-  }
-
   @media (min-width: $tablet-width) {
-    grid-template: "text text text sber mts" minmax(205px, auto) "text text text vtb mish" minmax(205px, auto) "chulakov vcru epam sportmaster rustore" 205px / 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     padding: 0 0 96px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template: "text text text vtb  mts sber" minmax(240px, auto) "text text text . sportmaster rustore" minmax(239px, auto) "mish chulakov vcru epam . ." 239px / 1fr 1fr 1fr 1fr 1fr 1fr;
     padding: 80px 0;
   }
 }
 
+.recruiters__list {
+  display: grid;
+  grid-template: "sber mts vtb" 160px "mish chulakov vcru" 159px "epam sportmaster rustore" 159px / 1fr 1fr 1fr;
+  min-height: 478px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $narrow-tablet-width) {
+    grid-template: "sber mts  vtb ." 192px "empty mish chulakov vcru" 192px "epam sportmaster rustore ." 192px / 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template: "empty empty empty sber mts" 205px "empty empty empty vtb mish" 205px "chulakov vcru epam sportmaster rustore" 205px / 1fr 1fr 1fr 1fr 1fr;
+    margin: -287px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template: "empty empty empty vtb  mts sber" 240px "empty empty empty . sportmaster rustore" 239px "mish chulakov vcru epam . ." 239px / 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: -324px 0 0;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    border: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      grid-area: empty;
+      min-height: 205px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 239px;
+    }
+  }
+}
+
 .recruiters__text-wrapper {
-  grid-area: text;
+  // grid-area: text;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: start;
+  // padding: 60px 15px;
+
+  // @media (min-width: $tablet-width) {
+  //   padding: 0 40px 30px 39px;
+  // }
+
+  // @media (min-width: $desktop-width) {
+  //   padding: 0 40px 40px 39px;
+  // }
+
   display: flex;
   flex-direction: column;
   align-items: start;
   padding: 60px 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 40px 30px 39px;
+    max-width: 535px;
+    padding: 0 40px 30px;
+    z-index: 1;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 640px;
     padding: 0 40px 40px 39px;
   }
 }
@@ -108,8 +178,22 @@
 .recruiters__block {
   display: grid;
   place-items: center;
+  min-height: 159px;
+  box-sizing: border-box;
   border: 1px solid $accent-four;
   border-right: none;
+
+  @media (min-width: $narrow-tablet-width) {
+    min-height: 192px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 205px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 239px;
+  }
 
   &--sber {
     grid-area: sber;
@@ -209,6 +293,11 @@
     @media (min-width: $desktop-width) {
       border: 1px solid $accent-four;
     }
+  }
+
+  &:last-child {
+    border-right: 1px solid $accent-four;
+    border-bottom: 1px solid $accent-four;
   }
 }
 
