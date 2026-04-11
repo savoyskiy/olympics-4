@@ -1,7 +1,12 @@
 .header {
   display: flex;
-  border-bottom: 1px solid $main-opacity-10;
+  border-bottom: 1px solid $accent-thirteen;
   z-index: 1;
+
+  &--menu-open {
+    position: fixed;
+    width: 100%;
+  }
 }
 
 .header__navigation {
@@ -81,7 +86,7 @@
   min-height: 69px;
   padding: 0;
   border: none;
-  border-left: 1px solid $main-opacity-10;
+  border-left: 1px solid $accent-thirteen;
   background-color: $base;
   cursor: pointer;
 
@@ -106,8 +111,6 @@
   }
 
   &--open {
-    border-right: 1px solid $main-opacity-10;
-
     &::before {
       top: 24px;
       left: 25px;
@@ -124,11 +127,11 @@
   }
 
   &:hover {
-    background-color: $accent-eleven;
+    background-color: $accent-thirteen;
   }
 
   &:focus-visible {
-    background-color: $accent-eleven;
+    background-color: $accent-thirteen;
   }
 
   &:active {
@@ -136,7 +139,7 @@
   }
 
   &:disabled {
-    background-color: $accent-five;
+    background-color: $accent-thirteen;
     pointer-events: none;
 
     &::before,
