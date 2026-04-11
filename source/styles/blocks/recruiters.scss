@@ -1,0 +1,217 @@
+.recruiters {
+  display: grid;
+  grid-template: "text text text" auto "sber mts vtb" 160px "mish chulakov vcru" 159px "epam sportmaster rustore" 159px / 1fr 1fr 1fr;
+  min-height: 822px;
+  padding: 0 0 126px;
+
+  @media (min-width: $narrow-tablet-width) {
+    grid-template: "text text text text" auto "sber mts  vtb ." 192px ". mish chulakov vcru" 192px "epam sportmaster rustore ." 192px / 1fr 1fr 1fr 1fr;
+    padding: 0 0 96px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template: "text text text sber mts" 205px "text text text vtb mish" 205px "chulakov vcru epam sportmaster rustore" 205px / 1fr 1fr 1fr 1fr 1fr;
+    padding: 0 0 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template: "text text text vtb  mts sber" 240px "text text text . sportmaster rustore" 239px "mish chulakov vcru epam . ." 239px / 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 80px 0;
+  }
+}
+
+.recruiters__text-wrapper {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 60px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 40px 30px 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px 40px 39px;
+  }
+}
+
+.recruiters__header {
+  min-height: 74px;
+  margin: 0 0 19px;
+  font-family: $loos-wide;
+  font-size: 38px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    min-height: 105px;
+    font-size: 55px;
+    line-height: 96%;
+    margin: 0 0 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 105px;
+    font-size: 55px;
+    line-height: 96%;
+    margin: 0 0 21px;
+  }
+}
+
+.recruiters__text {
+  min-height: 50px;
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: $main-opacity-70;
+
+  @media (min-width: $desktop-width) {
+    min-height: 67px;
+    margin: 0 0 35px;
+    font-size: 24px;
+  }
+}
+
+.recruiters__link {
+  display: inline-block;
+  padding: 14px 25px 16px;
+  font-family: $loos-wide;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: $base;
+  background-color: $accent-one;
+  border-radius: 136px;
+  text-decoration: none;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    max-width: 330px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.recruiters__block {
+  display: grid;
+  place-items: center;
+  border: 1px solid $accent-four;
+  border-right: none;
+
+  &--sber {
+    grid-area: sber;
+
+    @media (min-width: $desktop-width) {
+      border-right: 1px solid $accent-four;
+    }
+  }
+
+  &--mts {
+    grid-area: mts;
+  }
+
+  &--vtb {
+    grid-area: vtb;
+
+    @media (min-width: $narrow-tablet-width) {
+      border-right: 1px solid $accent-four;
+    }
+
+    @media (min-width: $tablet-width) {
+      border-top: none;
+      border-right: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-top: 1px solid $accent-four;
+    }
+  }
+
+  &--sportmaster {
+    grid-area: sportmaster;
+    border-top: none;
+  }
+
+  &--rustore {
+    grid-area: rustore;
+    border-top: none;
+
+    @media (min-width: $narrow-tablet-width) {
+      border-right: 1px solid $accent-four;
+    }
+
+    @media (min-width: $tablet-width) {
+      border-right: 1px solid $accent-four;
+    }
+  }
+
+  &--mish {
+    grid-area: mish;
+    border-top: none;
+
+    @media (min-width: $tablet-width) {
+      border-top: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-top: 1px solid $accent-four;
+    }
+  }
+
+  &--chulakov {
+    grid-area: chulakov;
+    border-top: none;
+
+    @media (min-width: $narrow-tablet-width) {
+      border-right: 1px solid $accent-four;
+    }
+
+    @media (min-width: $tablet-width) {
+      border-top: 1px solid $accent-four;
+    }
+  }
+
+  &--vcru {
+    grid-area: vcru;
+    border-top: none;
+
+    @media (min-width: $narrow-tablet-width) {
+      border-top: 1px solid $accent-four;
+      border-left: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-top: 1px solid $accent-four;
+    }
+  }
+
+  &--epam {
+    grid-area: epam;
+    border-top: none;
+
+    @media (min-width: $narrow-tablet-width) {
+      border-top: 1px solid $accent-four;
+    }
+
+    @media (min-width: $desktop-width) {
+      border: 1px solid $accent-four;
+    }
+  }
+}
+
+.recruiters__logo {
+  object-fit: contain;
+}

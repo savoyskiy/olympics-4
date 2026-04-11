@@ -1,0 +1,292 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+  padding: 60px 15px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 43px;
+    padding: 60px 30px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 43px;
+    padding: 60px 40px 120px;
+  }
+}
+
+.price__header-wrapper {
+  display: block;
+  overflow: hidden;
+  min-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 60px;
+  }
+}
+
+@keyframes price-header-lifting {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.price__header {
+  min-height: 37px;
+  margin: 0;
+  font-family: $loos-wide;
+  font-size: 38px;
+  line-height: 98%;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+
+  @media (min-width: $tablet-width) {
+    min-height: 52px;
+    font-size: 55px;
+    line-height: 96%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .price__header--lifted {
+    animation-name: price-header-lifting;
+    animation-duration: 1s;
+  }
+}
+
+.price__wrapper {
+  display: grid;
+  grid-template: "name name" min-content "list list" min-content "price link" min-content / 1fr 166px;
+  gap: 30px 40px;
+  padding: 30px;
+  background-color: $accent-three;
+  border-radius: 32px;
+
+  @media (min-width: $desktop-width) {
+    grid-template: "name price" min-content "list ." min-content ". link" min-content / 1fr 384px;
+    gap: 6px 40px;
+    padding: 30px 19px 30px 30px;
+  }
+}
+
+.price__name {
+  grid-area: name;
+  min-height: 30px;
+  margin: 0;
+  font-family: $loos-wide;
+  font-size: 30px;
+  line-height: 102%;
+  font-weight: 500;
+
+  @media (min-width: $desktop-width) {
+    font-size: 34px;
+  }
+}
+
+.price__content-list {
+  position: relative;
+  grid-area: list;
+  display: grid;
+  row-gap: 15px;
+  margin: 0 0 40px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  list-style-type: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -39px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $main-opacity-10;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template: "one four" min-content "two five" min-content "three six" min-content / 400px 400px;
+    gap: 10px 26px;
+    margin: 0 0 30px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template: "one four" min-content "two five" min-content "three six" min-content / 400px 400px;
+    gap: 10px 26px;
+    margin: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.price__content-item {
+  position: relative;
+  padding: 0 0 0 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: $accent-one;
+    background-image: url("../../icons/stack.svg#check");
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--one {
+      grid-area: one;
+    }
+
+    &--two {
+      grid-area: two;
+    }
+
+    &--three {
+      grid-area: three;
+    }
+
+    &--four {
+      grid-area: four;
+    }
+
+    &--five {
+      grid-area: five;
+    }
+
+    &--six {
+      grid-area: six;
+    }
+  }
+}
+
+.price__money-wrapper {
+  position: relative;
+  grid-area: price;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  min-height: 95px;
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 1px;
+      height: 270px;
+      background-color: $main-opacity-10;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 43px;
+  }
+}
+
+.price__cost {
+  display: none;
+  margin: 0 0 5px;
+  font-family: $loos-wide;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+
+  @media (min-width: $desktop-width) {
+    min-height: 25px;
+    display: inline;
+    margin: 0 0 3px;
+  }
+}
+
+.price__roubles,
+.price__tenge {
+  display: flex;
+  column-gap: 20px;
+  min-height: 34px;
+  margin: 0;
+  font-family: $loos-wide;
+  font-size: 34px;
+  line-height: 102%;
+  font-weight: 500;
+}
+
+.price__roubles-full,
+.price__tenge-full {
+  position: relative;
+  display: none;
+  color: $accent-five;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $accent-five;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.price__preposition {
+  min-height: 22px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.price__link {
+  grid-area: link;
+  align-self: end;
+  display: inline-block;
+  padding: 14px 25px 16px;
+  font-family: $loos-wide;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: $base;
+  background-color: $accent-one;
+  border-radius: 136px;
+  text-decoration: none;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    justify-self: start;
+    max-width: 250px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

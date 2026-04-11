@@ -1,0 +1,233 @@
+.sertificate {
+  background: linear-gradient(to top, $main 196px, $accent-three 196px);
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient($base 250px, $main 250px);
+  }
+}
+
+.sertificate__container {
+  padding: 29px 15px 45px;
+
+  @media (min-width: $tablet-width) {
+    padding: 29px 30px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px 45px;
+  }
+}
+
+.sertificate__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 55px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    column-gap: 150px;
+    min-height: 440px;
+    padding: 30px;
+    background-color: $accent-three;
+    border-radius: 32px;
+  }
+}
+
+@keyframes sertificate-header-wrapper-lifting {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sertificate__header-wrapper {
+  display: block;
+  overflow: hidden;
+  min-height: 129px;
+
+  @media (min-width: $narrow-tablet-width) {
+    min-height: 74px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 111px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 156px;
+  }
+
+  &--hidden {
+    transform: translateY(50px);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &--lifted {
+      animation-name: sertificate-header-wrapper-lifting;
+      animation-duration: 1.8s;
+      animation-delay: 0.25s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes sertificate-header-lifting {
+  0% {
+    transform: translateY(80%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.sertificate__header {
+  min-height: 111px;
+  margin: 0 0 18px;
+  font-family: $loos-wide;
+  font-size: 38px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+
+  @media (min-width: $narrow-tablet-width) {
+    min-height: 74px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 890px;
+    min-height: 98px;
+    font-size: 46px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 490px;
+    min-height: 138px;
+    font-size: 46px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  &--hidden {
+    transform: translateY(80%);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &--lifted {
+      animation-name: sertificate-header-lifting;
+      animation-duration: 1s;
+      animation-delay: 0.25s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.sertificate__text {
+  min-height: 50px;
+  margin: 0 0 25px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: $main-opacity-70;
+
+  @media (min-width: $narrow-tablet-width) {
+    max-width: 490px;
+  }
+}
+
+.sertificate__link-wrapper {
+  display: block;
+  overflow: hidden;
+}
+
+@keyframes sertificate-link-lifting {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.sertificate__link {
+  display: inline-block;
+  padding: 14px 25px 16px;
+  font-family: $loos-wide;
+  font-size: 18px;
+  line-height: 140%;
+  text-decoration: none;
+  text-align: center;
+  color: $base;
+  background-color: $accent-one;
+  border-radius: 136px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 300px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--hidden {
+    transform: translateY(100%);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &--lifted {
+      animation-name: sertificate-link-lifting;
+      animation-duration: 1.25s;
+      animation-delay: 0.25s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+
+@keyframes sertificate-image-scaling {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.sertificate__image {
+  display: block;
+  max-width: 448px;
+  object-fit: contain;
+
+  @media (min-width: $desktop-width) {
+    max-width: 660px;
+  }
+
+  &--hidden {
+    transform: scale(0);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &--scaling {
+      animation-name: sertificate-image-scaling;
+      animation-duration: 1.2s;
+      animation-delay: 0.25s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+

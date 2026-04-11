@@ -1,0 +1,28 @@
+/* GLOBAL */
+@import "./common/variables.scss";
+@import "./common/mixins.scss";
+@import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
+
+/* HEADER */
+@import "./blocks/header.scss";
+@import "./blocks/main-menu.scss";
+
+/* MAIN */
+@import "./blocks/main.scss";
+@import "./blocks/about.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/students.scss";
+@import "./blocks/price.scss";
+@import "./blocks/recruiters.scss";
+
+/* FOOTER */
+@import "./blocks/sertificate.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/signature.scss";
+@import "./blocks/form.scss";
+@import "./blocks/modal.scss";
+
+/* 404 */
+@import "./blocks/not-found.scss";

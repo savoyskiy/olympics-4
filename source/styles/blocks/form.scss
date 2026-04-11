@@ -1,0 +1,190 @@
+.form {
+  background-color: $main;
+  color: $base;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 45px 15px 90px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 30px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 45px 40px 90px;
+  }
+}
+
+.form__header {
+  min-height: 74px;
+  margin: 0;
+  font-family: $loos-wide;
+  font-size: 38px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+
+  @media (min-width: $narrow-tablet-width) {
+    min-height: 37px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 53px;
+    font-size: 55px;
+    line-height: 96%;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 53px;
+    font-size: 55px;
+    line-height: 96%;
+  }
+}
+
+.form__disclaimer {
+  max-width: 450px;
+  min-height: 36px;
+  margin: 0;
+  font-family: $manrope;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  color: $base-opacity-50;
+}
+
+.form__body {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    width: 100%;
+  }
+}
+
+.form__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    width: 1145px;
+    margin: 0;
+  }
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: $base;
+  background-color: $base-opacity-20;
+  border-radius: 100px;
+
+  &::placeholder {
+    color: $base-opacity-50;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $base-opacity-15;
+  }
+
+  &:focus-visible:not(:disabled) {
+    background-color: $base-opacity-15;
+  }
+
+  &:disabled {
+    background-color: $accent-five;
+    color: $base-opacity-20;
+    outline: none;
+    pointer-events: none;
+
+    &::placeholder {
+      color: $base-opacity-20;
+    }
+  }
+}
+
+.form__error-message-text {
+  position: absolute;
+  bottom: -19px;
+  margin: 0 0 0 25px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  color: $accent-twelve;
+  text-transform: lowercase;
+
+  @media (min-width: $tablet-width) {
+    bottom: -35px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -40px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+}
+
+.form__submit {
+  width: 210px;
+  margin: 0;
+  padding: 14px 25px 16px;
+  border: none;
+  font-family: $loos-wide;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: $main;
+  text-align: center;
+  background-color: $accent-two;
+  border-radius: 136px;
+  box-sizing: border-box;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover:not(:disabled) {
+    opacity: 0.7;
+  }
+
+  &:focus-visible:not(:disabled) {
+    opacity: 0.7;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: $accent-five;
+    color: $base-opacity-20;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,32 @@
+.signature-link {
+  display: flex;
+  align-items: start;
+  width: 101px;
+  height: 38px;
+  padding: 3px 2px 0 0;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  color: $base-opacity-50;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.signature-link__logo {
+  align-self: end;
+  display: block;
+  max-width: 85px;
+  object-fit: contain;
+}

@@ -1,0 +1,30 @@
+/* Base Colors */
+$main: #0d1627;
+$main-opacity-10: rgba(13, 22, 39, 0.1);
+$main-opacity-40: rgba(13, 22, 39, 0.4);
+$main-opacity-70: rgba(13, 22, 39, 0.7);
+$base: #ffffff;
+$base-opacity-15: rgba(255, 255, 255, 0.15);
+$base-opacity-20: rgba(255, 255, 255, 0.2);
+$base-opacity-50: rgba(255, 255, 255, 0.5);
+$base-opacity-70: rgba(255, 255, 255, 0.7);
+
+/* Accent Colors */
+$accent-one: #1859ff;
+$accent-two: #d9f243;
+$accent-three: #eef4f6;
+$accent-four: #dee9ed;
+$accent-five: #949ba4;
+$accent-six: #daeef4;
+$accent-seven: #002fa8;
+$accent-eight: #001a68;
+$accent-nine: rgba(0, 39, 178, 0.06);
+$accent-ten: rgba(24, 89, 255, 0.5);
+$accent-eleven: rgba(24, 89, 255, 0.25);
+$accent-twelve: #fd3333;
+
+/* Screen Width */
+$mobile-width: 480px;
+$narrow-tablet-width: 768px;
+$tablet-width: 1024px;
+$desktop-width: 1440px;

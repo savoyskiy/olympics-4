@@ -1,0 +1,246 @@
+.students {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 15px 117px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    background-color: $accent-four;
+  }
+
+  @media (min-width: $narrow-tablet-width) {
+    padding: 60px 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 30px;
+
+    &::before {
+      top: 60px;
+      left: 40px;
+      right: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 79px 40px;
+
+    &::before {
+      top: 78px;
+      left: 40px;
+      right: 40px;
+    }
+  }
+}
+
+.students__portraits-list {
+  display: flex;
+  align-self: start;
+  flex-wrap: wrap;
+  margin: 30px 10px 20px 0;
+  padding: 27px 21px;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 35px 10px 30px 0;
+    padding: 15px 10px;
+    border-radius: 32px;
+    background-image: linear-gradient(to left, $base 19%, $accent-three 51%, $accent-six 89%);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 35px 10px 30px 0;
+    padding: 20px 10px;
+    border-radius: 32px;
+    background-image: linear-gradient(to left, $base 19%, $accent-three 51%, $accent-six 89%);
+  }
+}
+
+.students__portraits-item {
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.students__portraits-item:not(:last-child) {
+  width: 90px;
+  height: 90px;
+  background-color: $accent-ten;
+  mask-image: radial-gradient(circle at calc(125% + 3px) 50%, transparent 50.5px, $main 51px);
+
+  @media (min-width: $desktop-width) {
+    width: 120px;
+    height: 120px;
+    mask-image: radial-gradient(circle at calc(125% + 5px) 50%, transparent 69.5px, $main 70px);
+  }
+}
+
+.students__portraits-item:not(:first-child) {
+  margin: 0 0 0 -22px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 -30px;
+  }
+}
+
+.students__portraits-item:nth-child(1) {
+  background-image: image-set(url("../../images/students/portrait-mobile-1@2x.webp") 2x, url("../../images/students/portrait-mobile-1@2x.jpg") 2x, url("../../images/students/portrait-mobile-1@1x.webp") 1x, url("../../images/students/portrait-mobile-1@1x.jpg") 1x);
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(url("../../images/students/portrait-1@2x.webp") 2x, url("../../images/students/portrait-1@2x.jpg") 2x, url("../../images/students/portrait-1@1x.webp") 1x, url("../../images/students/portrait-1@1x.jpg") 1x);
+  }
+}
+
+.students__portraits-item:nth-child(2) {
+  background-image: image-set(url("../../images/students/portrait-mobile-2@2x.webp") 2x, url("../../images/students/portrait-mobile-2@2x.jpg") 2x, url("../../images/students/portrait-mobile-2@1x.webp") 1x, url("../../images/students/portrait-mobile-2@1x.jpg") 1x);
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(url("../../images/students/portrait-2@2x.webp") 2x, url("../../images/students/portrait-2@2x.jpg") 2x, url("../../images/students/portrait-2@1x.webp") 1x, url("../../images/students/portrait-2@1x.jpg") 1x);
+  }
+}
+
+.students__portraits-item:nth-child(3) {
+  background-image: image-set(url("../../images/students/portrait-mobile-3@2x.webp") 2x, url("../../images/students/portrait-mobile-3@2x.jpg") 2x, url("../../images/students/portrait-mobile-3@1x.webp") 1x, url("../../images/students/portrait-mobile-3@1x.jpg") 1x);
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(url("../../images/students/portrait-3@2x.webp") 2x, url("../../images/students/portrait-3@2x.jpg") 2x, url("../../images/students/portrait-3@1x.webp") 1x, url("../../images/students/portrait-3@1x.jpg") 1x);
+  }
+}
+
+.students__portraits-item:nth-child(4) {
+  background-image: image-set(url("../../images/students/portrait-mobile-4@2x.webp") 2x, url("../../images/students/portrait-mobile-4@2x.png") 2x, url("../../images/students/portrait-mobile-4@1x.webp") 1x, url("../../images/students/portrait-mobile-4@1x.png") 1x);
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(url("../../images/students/portrait-4@2x.webp") 2x, url("../../images/students/portrait-4@2x.png") 2x, url("../../images/students/portrait-4@1x.webp") 1x, url("../../images/students/portrait-4@1x.png") 1x);
+  }
+}
+
+.students__portraits-link {
+  position: relative;
+  display: block;
+  width: 86px;
+  height: 86px;
+  border: 2px solid $accent-one;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 2px;
+    background-color: $accent-one;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 45px;
+    background-color: $accent-one;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    background-color: $accent-six;
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+    background-color: $accent-six;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 116px;
+    height: 116px;
+
+    &::before {
+      width: 60px;
+    }
+
+    &::after {
+      height: 60px;
+    }
+  }
+}
+
+.students__statistic-list {
+  display: grid;
+  grid-template: "number" min-content "recommendation" min-content "benefit" min-content / 1fr;
+  row-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template: "number recommendation" min-content "number benefit" min-content / auto 443px;
+    gap: 35px 100px;
+  }
+}
+
+.students__statistic-item {
+  &--number {
+    grid-area: number;
+  }
+
+  &--recommendation {
+    grid-area: recommendation;
+  }
+
+  &--benefit {
+    grid-area: benefit;
+  }
+}
+
+.students__statistic-fact {
+  min-height: 90px;
+  font-family: $loos-wide;
+  font-size: 90px;
+  line-height: 100%;
+  letter-spacing: -0.06em;
+
+  &--percent {
+    margin: 0 0 10px;
+
+    @media (min-width: $desktop-width) {
+      margin: 0 0 9px;
+      letter-spacing: 0;
+    }
+  }
+
+  &--number {
+    margin: 0 0 5px;
+
+    @media (min-width: $desktop-width) {
+      min-height: 120px;
+      padding: 18px 0 0;
+      font-size: 120px;
+    }
+  }
+}
+
+.students__statistic-text {
+  min-height: 50px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: $main-opacity-70;
+  text-transform: lowercase;
+}

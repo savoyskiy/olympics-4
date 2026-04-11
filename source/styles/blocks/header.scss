@@ -1,0 +1,151 @@
+.header {
+  display: flex;
+  border-bottom: 1px solid $main-opacity-10;
+  z-index: 1;
+}
+
+.header__navigation {
+  display: flex;
+  flex-grow: 1;
+  padding: 17px 20px 16px 15px;
+  background-color: $base;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 30px 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 17px 40px 16px;
+  }
+}
+
+.header__logo-link {
+  display: block;
+  margin: 0 auto 0 0;
+  padding: 6px 0 0;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__logo {
+  display: block;
+  max-width: 127px;
+  object-fit: contain;
+}
+
+.header__start {
+  display: block;
+  max-width: 68px;
+  padding: 5px 15px;
+  font-family: $loos-wide;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: $accent-one;
+  color: $base;
+  border-radius: 136px;
+
+  @media (min-width: $desktop-width) {
+    align-self: start;
+    text-align: center;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__mobile-menu-button {
+  position: relative;
+  display: block;
+  width: 68px;
+  height: 69px;
+  padding: 0;
+  border: none;
+  border-left: 1px solid $main-opacity-10;
+  background-color: $base;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 23px;
+    width: 28px;
+    height: 2px;
+    background-color: $main;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 23px;
+    width: 28px;
+    height: 2px;
+    background-color: $main;
+  }
+
+  &--open {
+    border-right: 1px solid $main-opacity-10;
+
+    &::before {
+      top: 24px;
+      left: 25px;
+      transform: rotate(45deg);
+      transform-origin: top left;
+    }
+
+    &::after {
+      top: 43px;
+      left: 25px;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+  }
+
+  &:hover {
+    background-color: $accent-eleven;
+  }
+
+  &:focus-visible {
+    background-color: $accent-eleven;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: $accent-five;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      background-color: $main-opacity-10;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

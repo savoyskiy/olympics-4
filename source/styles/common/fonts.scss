@@ -1,0 +1,17 @@
+$loos: "Loos", sans-serif;
+
+@include font-face("Loos", 500, normal, url("../../fonts/LoosNormal-Medium.woff2") format("woff2"));
+
+$loos-wide: "LoosWide", sans-serif;
+
+@include font-face("LoosWide", 500, normal, url("../../fonts/LoosWide-Medium.woff2") format("woff2"));
+
+$manrope: "Manrope", sans-serif;
+
+@include font-face("Manrope", 500, normal, url("../../fonts/Manrope-Medium.woff2") format("woff2"));
+@include font-face("Manrope", 600, normal, url("../../fonts/Manrope-SemiBold.woff2") format("woff2"));
+
+$inter: "Inter", sans-serif;
+
+@include font-face("Inter", 500, normal, url("../../fonts/Inter-Medium.woff2") format("woff2"));
+@include font-face("Inter", 600, normal, url("../../fonts/Inter-SemiBold.woff2") format("woff2"));

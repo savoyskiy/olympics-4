@@ -1,0 +1,8 @@
+.main {
+  flex-grow: 1;
+  background-color: $base;
+
+  &--blur {
+    filter: blur(80px);
+  }
+}
