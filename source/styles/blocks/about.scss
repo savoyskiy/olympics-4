@@ -66,18 +66,21 @@
 
 .about__header--one {
   position: relative;
-  margin: 0 0 2px -40px;
+  margin: 0 0 2px;
+  text-indent: -40px;
 
   @media (min-width: $tablet-width) {
     position: static;
     max-width: 630px;
-    margin: 0 0 5px -241px;
+    margin: 0 0 5px -145px;
+    text-indent: -96px;
   }
 
   @media (min-width: $desktop-width) {
     position: static;
     max-width: 900px;
-    margin: 0 0 5px -344px;
+    margin: 0 0 5px -248px;
+    text-indent: -96px;
   }
 }
 
@@ -331,9 +334,10 @@
   }
 
   &--cursor {
-    background-image: url("../../icons/stack.svg#cursor");
-    background-position: 2px 2px;
-    background-repeat: no-repeat;
+    background-color: $accent-one;
+    mask-image: url("../../icons/stack.svg#cursor");
+    mask-position: 2px 2px;
+    mask-repeat: no-repeat;
   }
 }
 
