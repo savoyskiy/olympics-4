@@ -10,12 +10,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    grid-template: "text text text sber mts" 205px "text text text vtb mish" 205px "chulakov vcru epam sportmaster rustore" 205px / 1fr 1fr 1fr 1fr 1fr;
+    grid-template: "text text text sber mts" minmax(205px, auto) "text text text vtb mish" minmax(205px, auto) "chulakov vcru epam sportmaster rustore" 205px / 1fr 1fr 1fr 1fr 1fr;
     padding: 0 0 96px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template: "text text text vtb  mts sber" 240px "text text text . sportmaster rustore" 239px "mish chulakov vcru epam . ." 239px / 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template: "text text text vtb  mts sber" minmax(240px, auto) "text text text . sportmaster rustore" minmax(239px, auto) "mish chulakov vcru epam . ." 239px / 1fr 1fr 1fr 1fr 1fr 1fr;
     padding: 80px 0;
   }
 }
