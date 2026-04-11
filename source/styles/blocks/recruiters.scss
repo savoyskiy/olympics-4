@@ -1,24 +1,4 @@
 .recruiters {
-  // display: grid;
-  // grid-template: "text text text" auto "sber mts vtb" 160px "mish chulakov vcru" 159px "epam sportmaster rustore" 159px / 1fr 1fr 1fr;
-  // min-height: 822px;
-  // padding: 0 0 126px;
-
-  // @media (min-width: $narrow-tablet-width) {
-  //   grid-template: "text text text text" auto "sber mts  vtb ." 192px ". mish chulakov vcru" 192px "epam sportmaster rustore ." 192px / 1fr 1fr 1fr 1fr;
-  //   padding: 0 0 96px;
-  // }
-
-  // @media (min-width: $tablet-width) {
-  //   grid-template: "text text text sber mts" minmax(205px, auto) "text text text vtb mish" minmax(205px, auto) "chulakov vcru epam sportmaster rustore" 205px / 1fr 1fr 1fr 1fr 1fr;
-  //   padding: 0 0 96px;
-  // }
-
-  // @media (min-width: $desktop-width) {
-  //   grid-template: "text text text vtb  mts sber" minmax(240px, auto) "text text text . sportmaster rustore" minmax(239px, auto) "mish chulakov vcru epam . ." 239px / 1fr 1fr 1fr 1fr 1fr 1fr;
-  //   padding: 80px 0;
-  // }
-
   display: flex;
   flex-direction: column;
   padding: 0 0 126px;
@@ -75,20 +55,6 @@
 }
 
 .recruiters__text-wrapper {
-  // grid-area: text;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: start;
-  // padding: 60px 15px;
-
-  // @media (min-width: $tablet-width) {
-  //   padding: 0 40px 30px 39px;
-  // }
-
-  // @media (min-width: $desktop-width) {
-  //   padding: 0 40px 40px 39px;
-  // }
-
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -96,12 +62,14 @@
 
   @media (min-width: $tablet-width) {
     max-width: 535px;
+    min-height: 257px;
     padding: 0 40px 30px;
     z-index: 1;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 640px;
+    min-height: 284px;
     padding: 0 40px 40px 39px;
   }
 }
