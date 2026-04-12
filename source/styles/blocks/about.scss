@@ -275,22 +275,26 @@
   }
 }
 
-.about__picture-mark {
+.about__picture-name {
   position: relative;
   align-self: start;
-  display: flex;
-  align-items: start;
-  height: 54px;
-  padding: 0 0 0 26px;
+  margin: 0;
+  padding: 2px 8px;
+  font-family: $inter;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $base;
+  background-color: $accent-one;
 
   &--one {
-    margin: 17px 41px 0 0;
+    margin: 44px 41px 0 26px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -26px;
+      left: -26px;
       width: 26px;
       height: 26px;
       background-image: url("../../icons/stack.svg#hand");
@@ -299,32 +303,32 @@
     }
 
     @media (min-width: $tablet-width) {
-      margin: 24px 56px 0 0;
+      margin: 49px 36px 0 0;
     }
 
     @media (min-width: $desktop-width) {
-      margin: 34px 61px 0 0;
+      margin: 60px 61px 0 26px;
     }
   }
 
   &--two {
-    margin: 0 0 0 110px;
+    margin: 26px 0 0 136px;
 
     @media (min-width: $tablet-width) {
       align-self: end;
-      margin: 0 0 8px;
+      margin: 0 0 8px 26px;
     }
 
     @media (min-width: $desktop-width) {
       align-self: end;
-      margin: 0 0 12px;
+      margin: 0 0 12px 26px;
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -26px;
+      left: -26px;
       width: 26px;
       height: 26px;
       background-color: $accent-one;
@@ -336,23 +340,23 @@
 
   &--three {
     align-self: start;
-    margin: 21px 0 0 14px;
+    margin: 48px 0 0 40px;
 
     @media (min-width: $tablet-width) {
       align-self: end;
-      margin: 0 0 88px;
+      margin: 0 0 88px 26px;
     }
 
     @media (min-width: $desktop-width) {
       align-self: end;
-      margin: 0 0 125px;
+      margin: 0 0 125px 26px;
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -26px;
+      left: -26px;
       width: 26px;
       height: 26px;
       background-color: $accent-one;
@@ -361,16 +365,4 @@
       mask-repeat: no-repeat;
     }
   }
-}
-
-.about__picture-name {
-  align-self: end;
-  margin: 0;
-  padding: 2px 8px;
-  font-family: $inter;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  color: $base;
-  background-color: $accent-one;
 }
