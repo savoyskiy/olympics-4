@@ -126,15 +126,15 @@
     }
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: $accent-thirteen;
   }
 
-  &:focus-visible {
+  &:focus-visible:not(:disabled) {
     background-color: $accent-thirteen;
   }
 
-  &:active {
+  &:active:not(:disabled) {
     opacity: 0.3;
   }
 
