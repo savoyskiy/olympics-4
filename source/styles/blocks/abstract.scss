@@ -3,6 +3,16 @@
   display: flex;
   width: 356px;
   height: 380px;
+
+  @media (min-width: $tablet-width) {
+    width: 320px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: end;
+    width: 388px;
+    height: 430px;
+  }
 }
 
 .abstract__left {
@@ -10,8 +20,17 @@
   row-gap: 12px;
   width: 195px;
   height: 178px;
-  margin: 77px -52px 0 0;
+  margin: 77px -60px 0 0;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    margin: 77px -75px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 24px;
+    margin: 88px -56px 0 0;
+  }
 }
 
 .abstract__square {
@@ -20,6 +39,11 @@
   width: 103px;
   height: 103px;
   border: 1px solid $accent-one;
+
+  @media (min-width: $desktop-width) {
+    width: 117px;
+    height: 117px;
+  }
 
   &::before {
     content: "";
@@ -41,6 +65,19 @@
     height: 12px;
     border: 1px solid $accent-one;
     background-color: $base;
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 14px;
+      height: 14px;
+      right: -8px;
+    }
+
+    &::after {
+      width: 14px;
+      height: 14px;
+    }
   }
 }
 
@@ -73,6 +110,68 @@
     border: 1px solid $accent-one;
     background-color: $base;
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+
+    &::after {
+      right: -8px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.abstract__ux {
+  position: relative;
+  display: grid;
+  justify-self: start;
+  width: 72px;
+  height: 48px;
+  padding: 0 0 0 25px;
+
+  @media (min-width: $desktop-width) {
+    width: 81px;
+    height: 52px;
+    padding: 0 0 0 8px;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: -23px;
+    width: 23px;
+    height: 23px;
+    background-image: url("../../icons/stack.svg#hand-mobile");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../../icons/stack.svg#hand");
+    }
+  }
+}
+
+.abstract__ux-text {
+  margin: 0;
+  padding: 2px 7px;
+  font-family: $inter;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  background-color: $accent-one;
+  color: $base;
+
+  @media (min-width: $desktop-width) {
+    padding: 2px 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .abstract__right {
@@ -81,6 +180,10 @@
   row-gap: 64px;
   width: 232px;
   height: 380px;
+
+  @media (min-width: $desktop-width) {
+    row-gap: 71px;
+  }
 }
 
 .abstract__you {
@@ -92,6 +195,12 @@
   margin: -1px 0 0 1px;
   padding: 0;
 
+  @media (min-width: $desktop-width) {
+    width: 61px;
+    height: 66px;
+    margin: 0 0 0 1px;
+  }
+
   &::before {
     content: "";
     position: relative;
@@ -99,7 +208,17 @@
     left: -19px;
     width: 23px;
     height: 23px;
-    background-image: url("../../icons/cursor-yellow-mobile.svg");
+    background-color: $accent-two;
+    mask-image: url("../../icons/stack.svg#cursor-yellow-mobile");
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+      left: -21px;
+      width: 26px;
+      height: 26px;
+      mask-image: url("../../icons/stack.svg#cursor-yellow");
+    }
   }
 }
 
@@ -113,6 +232,12 @@
   text-align: center;
   background-color: $accent-two;
   color: $main;
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .abstract__rectangle {
@@ -121,6 +246,20 @@
   height: 257px;
   border: 1px solid $accent-one;
   border-bottom: none;
+
+  @media (min-width: $narrow-tablet-width) {
+    border-bottom-right-radius: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    border-bottom-right-radius: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 246px;
+    height: 292px;
+  }
 
   &::after {
     content: "";
@@ -131,6 +270,11 @@
     height: 12px;
     border: 1px solid $accent-one;
     background-color: $base;
+
+    @media (min-width: $desktop-width) {
+      width: 14px;
+      height: 14px;
+    }
   }
 }
 
@@ -140,4 +284,16 @@
   border-top-right-radius: 44px;
   background-color: $accent-fourteen;
   opacity: 13%;
+
+  @media (min-width: $narrow-tablet-width) {
+    border-bottom-right-radius: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom-right-radius: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top-right-radius: 50px;
+  }
 }
