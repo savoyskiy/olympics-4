@@ -233,18 +233,9 @@
   position: relative;
   display: none;
   color: $accent-five;
+  text-decoration: line-through solid 2px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: $accent-five;
-  }
-
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: inline;
   }
 }
