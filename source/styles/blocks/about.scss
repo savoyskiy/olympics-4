@@ -276,13 +276,27 @@
 }
 
 .about__picture-mark {
+  position: relative;
   align-self: start;
   display: flex;
   align-items: start;
   height: 54px;
+  padding: 0 0 0 26px;
 
   &--one {
     margin: 17px 41px 0 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      background-image: url("../../icons/stack.svg#hand");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
     @media (min-width: $tablet-width) {
       margin: 24px 56px 0 0;
@@ -305,6 +319,19 @@
       align-self: end;
       margin: 0 0 12px;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      background-color: $accent-one;
+      mask-image: url("../../icons/stack.svg#cursor");
+      mask-position: 2px 2px;
+      mask-repeat: no-repeat;
+    }
   }
 
   &--three {
@@ -320,24 +347,19 @@
       align-self: end;
       margin: 0 0 125px;
     }
-  }
-}
 
-.about__picture-marker {
-  width: 26px;
-  height: 26px;
-
-  &--hand {
-    background-image: url("../../icons/stack.svg#hand");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &--cursor {
-    background-color: $accent-one;
-    mask-image: url("../../icons/stack.svg#cursor");
-    mask-position: 2px 2px;
-    mask-repeat: no-repeat;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      background-color: $accent-one;
+      mask-image: url("../../icons/stack.svg#cursor");
+      mask-position: 2px 2px;
+      mask-repeat: no-repeat;
+    }
   }
 }
 
