@@ -3,7 +3,7 @@ import { pristineValidateEmail, pristineValidatePhone } from './validation.js'; 
 import { onClickBackdrop, onResultButtonClick, setFormData } from './form.js'; // импорт функций отправки формы
 import { liftingPriceHeader } from './price.js'; // импорт функции анимации заголовка блока price
 import { liftingSertificateHeader, liftingSertificateHeaderWrapper, liftingSertificateLink, scalingSertificateImage } from './sertificate.js'; // импорт функций анимации в блоке sertificate
-import { rotateImage, rotateAdvantagesImage, moveCards, moveItems } from './advantages.js'; // импорт функций анимации в блоке advantages
+import { rotateImage, rotateAboutImage, moveCards, moveItems } from './about.js'; // импорт функций анимации в блоке advantages
 
 const form = document.querySelector('.form__body'); // форма
 const resultForm = document.querySelector('.modal'); // модальное окно результата отправки формы
@@ -33,7 +33,7 @@ liftingSertificateLink();
 scalingSertificateImage();
 
 /* Анимация вращения картинки */
-rotateAdvantagesImage();
+rotateAboutImage();
 window.addEventListener('scroll', rotateImage); // установка обработчика на скролл для вращения фишки
 
 /* Анимация сдвига карточек */

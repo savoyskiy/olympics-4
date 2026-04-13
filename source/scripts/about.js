@@ -1,4 +1,4 @@
-/* Анимация в блоке advantages */
+/* Анимация в блоке about */
 
 /* Вращение картинки */
 const DESKTOP_WIDTH = 1024; // десктопная ширина экрана
@@ -10,15 +10,15 @@ const moveFactor = {
   itemSkills: 0.05, // параметр скорости сдвига карточки skills
   itemKnowledge: 0.1 // параметр скорости карточки knowledge
 };
-const advantagesList = document.querySelector('.advantages__list');
-const advantagesItemKnowledge = advantagesList.querySelector('.advantages__item--knowledge');
-const advantagesImageRotated = advantagesItemKnowledge.querySelector('.advantages__image');
-const advantagesItemSkills = advantagesList.querySelector('.advantages__item--skills');
+const aboutList = document.querySelector('.about__list');
+const aboutItemKnowledge = aboutList.querySelector('.about__item--knowledge');
+const aboutImageRotated = aboutItemKnowledge.querySelector('.about__image');
+const aboutItemSkills = aboutList.querySelector('.about__item--skills');
 
 const rotateImage = () => {
-  const image = document.querySelector('.advantages__image-rotated');
+  const image = document.querySelector('.about__image-rotated');
   if (image) {
-    const imagePosition = advantagesItemKnowledge.getBoundingClientRect().top;
+    const imagePosition = aboutItemKnowledge.getBoundingClientRect().top;
     let rotateAngle = 0; // угол поворота
     if (window.innerWidth >= DESKTOP_WIDTH) {
       rotateAngle = (window.innerHeight - imagePosition) * rotateParameters.speedFactor - rotateParameters.startAngle;
@@ -29,24 +29,24 @@ const rotateImage = () => {
   }
 };
 
-const observerAdvantagesImageRotated = new IntersectionObserver((entries) => {
+const observerAboutImageRotated = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting) {
-      advantagesImageRotated.classList.add('advantages__image-rotated');
+      aboutImageRotated.classList.add('about__image-rotated');
     } else {
-      advantagesImageRotated.classList.remove('advantages__image-rotated');
+      aboutImageRotated.classList.remove('about__image-rotated');
     }
   });
 });
 
-const rotateAdvantagesImage = () => observerAdvantagesImageRotated.observe(advantagesImageRotated);
+const rotateAboutImage = () => observerAboutImageRotated.observe(aboutImageRotated);
 
 /* Сдвиг карточек */
 const moveItems = () => {
-  const itemKnowledge = document.querySelector('.advantages__item--knowledge-move');
-  const itemSkills = document.querySelector('.advantages__item--skills-move');
+  const itemKnowledge = document.querySelector('.about__item--knowledge-move');
+  const itemSkills = document.querySelector('.about__item--skills-move');
   if (itemKnowledge && itemSkills) {
-    const itemsPosition = advantagesList.getBoundingClientRect().top;
+    const itemsPosition = aboutList.getBoundingClientRect().top;
     let moveKnowledgeDistance = 0;
     let moveSkillsDistance = 0;
     if (window.innerWidth >= DESKTOP_WIDTH) {
@@ -61,15 +61,15 @@ const moveItems = () => {
 const observerItemList = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting) {
-      advantagesItemKnowledge.classList.add('advantages__item--knowledge-move');
-      advantagesItemSkills.classList.add('advantages__item--skills-move');
+      aboutItemKnowledge.classList.add('about__item--knowledge-move');
+      aboutItemSkills.classList.add('about__item--skills-move');
     } else {
-      advantagesItemKnowledge.classList.remove('advantages__item--knowledge-move');
-      advantagesItemSkills.classList.remove('advantages__item--skills-move');
+      aboutItemKnowledge.classList.remove('about__item--knowledge-move');
+      aboutItemSkills.classList.remove('about__item--skills-move');
     }
   });
 });
 
-const moveCards = () => observerItemList.observe(advantagesList);
+const moveCards = () => observerItemList.observe(aboutList);
 
-export { rotateImage, rotateAdvantagesImage, moveCards, moveItems };
+export { rotateImage, rotateAboutImage, moveCards, moveItems };
