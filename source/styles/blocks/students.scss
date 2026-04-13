@@ -129,6 +129,7 @@
   height: 86px;
   border: 2px solid $accent-one;
   border-radius: 50%;
+  transition: 0.5s;
 
   &::before {
     content: "";
@@ -155,6 +156,7 @@
   &:hover {
     opacity: 0.7;
     background-color: $accent-six;
+    transition: 0.5s;
   }
 
   &:focus-visible {

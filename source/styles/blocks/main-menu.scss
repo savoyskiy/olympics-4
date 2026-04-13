@@ -42,8 +42,26 @@
   color: $main;
   text-decoration: none;
 
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $main;
+      transition: 0.5s;
+    }
+  }
+
   &:hover {
     opacity: 0.7;
+
+    &::after {
+      width: 100%;
+      transition: 0.5s;
+    }
   }
 
   &:focus-visible {
